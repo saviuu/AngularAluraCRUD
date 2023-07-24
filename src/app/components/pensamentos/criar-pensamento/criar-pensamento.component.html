@@ -11,6 +11,7 @@
         id="pensamento"
         name="pensamento"
         placeholder="Digite o pensamento"
+        [(ngModel)]="pesamento.conteudo"
       >
       <label for="autoria">Autoria ou fonte</label>
       <input
@@ -88,8 +89,8 @@
         </div>
 
         <div class="acoes">
-          <button class="botao">Salvar</button>
-          <button class="botao">Cancelar</button>
+          <button (click)="criarPensamento($event)" class="botao">Salvar</button>
+          <button [routerLink]="routeListarPensamento" (click)="cancelar($event)" class="botao">Cancelar</button>
         </div>
     </form>
 </section>
