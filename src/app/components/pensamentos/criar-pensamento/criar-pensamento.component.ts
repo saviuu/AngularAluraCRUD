@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ROUTE_LISTAR_PENSAMENTO } from 'src/app/routes';
+import { PensamentoDTO } from '../dto/pensamento-dto';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -12,12 +13,7 @@ export class CriarPensamentoComponent {
     return ROUTE_LISTAR_PENSAMENTO;
   }
 
-  pesamento = {
-    id: '1',
-    conteudo: 'Aprendendo Angular',
-    autoria: 'Dev',
-    modelo: '',
-  }
+  @Input() pensamento: PensamentoDTO;
 
   criarPensamento(event: any){
     event.preventDefault();
