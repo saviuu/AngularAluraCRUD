@@ -1,28 +1,34 @@
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { CriarPensamentoComponent } from './components/pensamentos/criar-pensamento/criar-pensamento.component';
-import { FormsModule } from '@angular/forms';
-import { ListarPensamentoComponent } from './components/pensamentos/listar-pensamento/listar-pensamento.component';
-import { CardPensamentoComponent } from './components/pensamentos/card-pensamento/card-pensamento.component';
+import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
+import { RodapeComponent } from './componentes/rodape/rodape.component';
+import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
+import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
+import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensamento.component';
+import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
+    CabecalhoComponent,
+    RodapeComponent,
     CriarPensamentoComponent,
     ListarPensamentoComponent,
-    CardPensamentoComponent
+    PensamentoComponent,
+    ExcluirPensamentoComponent,
+    EditarPensamentoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
